@@ -1,0 +1,40 @@
+﻿<Window x:Class="AISDetaly.ChangeProvider"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AISDetaly"
+        mc:Ignorable="d"
+        Title="ChangeProvider" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Source="Source/MainBackground.jpg" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="9"/>
+        <Border Opacity="0.9" Style="{StaticResource ForControls}" Grid.Row="1" Grid.RowSpan="4" Margin="5"/>
+        <TextBlock VerticalAlignment="Center" Text="Поставщик" Grid.Row="1" Style="{StaticResource ForTextBlocks}"/>
+        <TextBlock VerticalAlignment="Center" Text="Сотрудник" Grid.Row="2" Style="{StaticResource ForTextBlocks}"/>
+        <TextBlock VerticalAlignment="Center" Text="Город" Grid.Row="3" Style="{StaticResource ForTextBlocks}"/>
+        <TextBlock VerticalAlignment="Center" Text="Телефон" Grid.Row="4" Style="{StaticResource ForTextBlocks}"/>
+        
+        <TextBox x:Name="nameTB" Style="{DynamicResource ForTextBoxes}" Grid.Row="1" Grid.Column="1" />
+        <TextBox x:Name="employeeTB" Style="{DynamicResource ForTextBoxes}" Grid.Row="2" Grid.Column="1"/>
+        <TextBox x:Name="cityTB" Style="{DynamicResource ForTextBoxes}" Grid.Row="3" Grid.Column="1"/>
+        <TextBox x:Name="phoneTB" Style="{DynamicResource ForTextBoxes}" Grid.Row="4" Grid.Column="1"/>
+        <Button x:Name="ToMain" Grid.Row="5" Content="Назад" Style="{DynamicResource ForButtons}" Click="ToMain_Click"/>
+        <Button x:Name="AddNew" Grid.Row="5" Grid.Column="1" Content="Сохранить" Style="{DynamicResource ForButtons}" Click="AddNew_Click"/>
+    </Grid>
+</Window>
